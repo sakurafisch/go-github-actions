@@ -11,10 +11,10 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: Build Docker Image
-              run: docker build . --tag my-image-name:$(date + %s)
+              run: docker build . --tag my-image-name:$(date +%s)
             
-            - name: Publish to Registry
-              uses: elgohr/Publish-Docker-Github-Action@master
+            # - name: Publish to Registry
+            #   uses: elgohr/Publish-Docker-Github-Action@master
             #   with:
             #     name: forbsey/go-github-actions
             #     username: ${{ secrets.DOCKER_USERNAME }}
